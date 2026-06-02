@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الفدرالية 101 | مدخل إلى الفدرالية وتطبيقها في لبنان</title>
+    <meta name="description" content="دورة توعوية وتدريبية حول الفدرالية موجّهة إلى الشباب اللبناني. عشر محاضرات، من ضبط المصطلحات إلى تأسيس الخلايا الشبابية." />
+
+    <link rel="icon" type="image/png" href="https://federallebanon.org/assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <div class="cedar-loader">
+                <img src="logo.png" alt="" class="cedar-img" />
+            </div>
+            <div class="loader-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Floating particles background -->
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating side CTA -->
+    <a href="#register" class="float-cta" aria-label="سجّل في الدورة">
+        <span class="float-cta-text">سجّل الآن</span>
+        <span class="float-cta-icon"><i class="fa-solid fa-arrow-left"></i></span>
+    </a>
+
+    <main>
+        <!-- ================== HERO ================== -->
+        <section class="hero" id="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <video id="heroVideo" class="hero-video" autoplay muted playsinline loop preload="metadata">
+                    <source src="federalismhero.mp4" type="video/mp4" />
+                </video>
+                <div class="hero-gradient"></div>
+                <div class="hero-mesh"></div>
+                <div class="hero-orb hero-orb-1"></div>
+                <div class="hero-orb hero-orb-2"></div>
+                <div class="hero-orb hero-orb-3"></div>
+                <div class="hero-grid"></div>
+            </div>
+
+            <div class="container hero-inner">
+                <div class="hero-badge" data-anim="fade-up">
+                    <span class="hero-badge-dot"></span>
+                    <span>دورة توعوية وتدريبية · ١٠ محاضرات</span>
+                </div>
+
+                <div class="hero-logo-wrap" data-anim="zoom">
+                    <div class="hero-logo-glow"></div>
+                    <img src="logo.png" alt="شعار لبنان الفدرالي" class="hero-logo" />
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="hero-title-line">الفدرالية</span>
+                    <span class="hero-title-num">101</span>
+                </h1>
+
+                <p class="hero-subtitle" data-anim="fade-up">
+                    مدخل إلى الفدرالية وتطبيقها في لبنان
+                </p>
+
+                <p class="hero-desc" data-anim="fade-up">
+                    دورة معمّقة تنطلق من ضبط المصطلحات، تمرّ بتاريخ الأزمة اللبنانية،
+                    وتنتهي بتأسيس خلايا شبابية جامعية ومناطقية تنشر الوعي الفدرالي
+                    بهدوءٍ واحتراف داخل بيئاتها.
+                </p>
+
+                <div class="hero-cta" data-anim="fade-up">
+                    <a href="#register" class="btn btn-primary">
+                        <span>سجّل اهتمامك بالدورة</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <a href="#lectures" class="btn btn-ghost">
+                        <span>استعرض المحاور</span>
+                        <i class="fa-solid fa-list-check"></i>
+                    </a>
+                </div>
+
+                <div class="hero-stats" data-anim="fade-up">
+                    <div class="stat">
+                        <div class="stat-num" data-count="10">0</div>
+                        <div class="stat-label">محاضرة</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="3">0</div>
+                        <div class="stat-label">محاور رئيسة</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="10">0</div>
+                        <div class="stat-label">مخرجات تعلّم</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="1">0</div>
+                        <div class="stat-label">هدف: وعيٌ منظّم</div>
+                    </div>
+                </div>
+
+                <div class="hero-sound">
+                    <audio id="heroAudio" src="federalism.mp3" autoplay muted loop preload="auto"></audio>
+                    <button type="button" class="sound-bubble" id="soundToggle" aria-label="إيقاف الصوت">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <span class="sound-note" id="soundNote">إذا لم يبدأ الصوت تلقائيًا، اضغط الزر</span>
+                </div>
+
+                <a href="#about" class="hero-scroll" aria-label="انتقل إلى الأسفل">
+                    <span class="hero-scroll-line"></span>
+                    <span>اكتشف الدورة</span>
+                    <span class="hero-scroll-line"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================== ABOUT ================== -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="kicker">طبيعة الدورة</span>
+                    <h2 class="section-title">
+                        ليست محاضرة نظرية،
+                        <span class="accent">بل حركة وعي منظّمة</span>
+                    </h2>
+                    <p class="section-lead">
+                        هذه الدورة برنامج توعوي وتدريبي للشباب اللبناني. هدفها نشر الوعي
+                        حول الفدرالية، إزالة الالتباسات المرتبطة بها، تدريب المشاركين
+                        على شرحها بهدوء ووضوح، وتشجيعهم لاحقًا على تأسيس خلايا شبابية
+                        تنشر الفكرة داخل بيئاتها.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <article class="feature" data-aos="fade-up" data-aos-delay="0">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h3>محاضرات مباشرة</h3>
+                        <p>محتوى معرفي وأكاديمي مبسّط يلائم الشباب، من دون تعقيد نظري أو خطابية.</p>
+                    </article>
+
+                    <article class="feature" data-aos="fade-up" data-aos-delay="80">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3>نقاشات مفتوحة</h3>
+                        <p>مساحة آمنة للحوار حول هواجس اللبنانيين، باحترامٍ ووضوح، بعيدًا عن الاستفزاز.</p>
+                    </article>
+
+                    <article class="feature" data-aos="fade-up" data-aos-delay="160">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3>أمثلة مقارنة</h3>
+                        <p>تجارب فدرالية من سويسرا وألمانيا وكندا وبلجيكا والإمارات والهند، لاستخلاص دروس للبنان.</p>
+                    </article>
+
+                    <article class="feature" data-aos="fade-up" data-aos-delay="240">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h3>تمارين تواصلية</h3>
+                        <p>تدريب عملي على مخاطبة العائلة، الطلاب، المناطق، والسوشال ميديا بلغةٍ هادئة.</p>
+                    </article>
+
+                    <article class="feature" data-aos="fade-up" data-aos-delay="320">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <h3>أسئلة وأجوبة</h3>
+                        <p>الردّ على الاعتراضات الشائعة بعقلانية، من دون انفعال أو تحويل النقاش إلى معركة هوية.</p>
+                    </article>
+
+                    <article class="feature" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3>من الوعي إلى الفعل</h3>
+                        <p>ننتقل في المحاضرة الأخيرة من الفهم الفردي إلى تأسيس خلايا شبابية جامعية ومناطقية.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== PILLARS ================== -->
+        <section class="section pillars" id="pillars">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="kicker light">الأولويات الثلاث</span>
+                    <h2 class="section-title light">
+                        <span class="text-white">سيادة</span>
+                        <span class="pillar-sep">·</span>
+                        <span class="text-white">حياد</span>
+                        <span class="pillar-sep">·</span>
+                        <span class="text-white">فدراليّة</span>
+                    </h2>
+                    <p class="section-lead light">
+                        بهذا الترتيب، تنطلق الدورة في فهمها للدولة. سيادة أوّلًا، حيادٌ
+                        يحميها، وفدراليّة تنظّم التعدّد داخلها.
+                    </p>
+                </div>
+
+                <div class="pillars-row">
+                    <div class="pillar" data-aos="zoom-in" data-aos-delay="0">
+                        <div class="pillar-num">01</div>
+                        <div class="pillar-icon">
+                            <i class="fa-solid fa-flag"></i>
+                        </div>
+                        <h3>سيادة</h3>
+                        <p>
+                            تحرير لبنان من أيّ وصاية، وفرض قراره الحرّ على أرضه وفي
+                            سياساته الخارجية.
+                        </p>
+                    </div>
+
+                    <div class="pillar" data-aos="zoom-in" data-aos-delay="120">
+                        <div class="pillar-num">02</div>
+                        <div class="pillar-icon">
+                            <i class="fa-solid fa-dove"></i>
+                        </div>
+                        <h3>حياد</h3>
+                        <p>
+                            إخراج لبنان من لعبة الصراعات الإقليمية، ومنعه من أن يبقى
+                            ساحة لغيره.
+                        </p>
+                    </div>
+
+                    <div class="pillar" data-aos="zoom-in" data-aos-delay="240">
+                        <div class="pillar-num">03</div>
+                        <div class="pillar-icon">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </div>
+                        <h3>فدراليّة</h3>
+                        <p>
+                            نظام دستوري مرن لإدارة التعدّد اللبناني، وتقوية الدولة لا
+                            هدمها.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== LECTURES ================== -->
+        <section class="section lectures" id="lectures">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="kicker">هيكل الدورة</span>
+                    <h2 class="section-title">
+                        عشر محاضرات، <span class="accent">من المصطلح إلى الخلية</span>
+                    </h2>
+                    <p class="section-lead">
+                        يبدأ المسار بضبط اللغة، يفتح أمامك تجارب العالم، يعود إلى
+                        تاريخ لبنان قبل الطائف وبعده، يطّلعك على المشاريع المطروحة،
+                        ثم ينقلك من الفهم إلى تأسيس خلية شبابية.
+                    </p>
+                </div>
+
+                <div class="lectures-tabs" data-aos="fade-up">
+                    <button class="tab active" data-tab="all">الكل <span>10</span></button>
+                    <button class="tab" data-tab="foundations">تأسيس <span>2</span></button>
+                    <button class="tab" data-tab="history">تاريخ <span>2</span></button>
+                    <button class="tab" data-tab="context">سياق <span>2</span></button>
+                    <button class="tab" data-tab="practice">تطبيق <span>2</span></button>
+                    <button class="tab" data-tab="action">عمل <span>2</span></button>
+                </div>
+
+                <div class="timeline" id="timeline">
+                    <!-- Lecture cards injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== OUTCOMES ================== -->
+        <section class="section outcomes" id="outcomes">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="kicker">الخلاصة العامة</span>
+                    <h2 class="section-title">
+                        ما <span class="accent">سيكتسبه المشاركون</span> في نهاية الدورة؟
+                    </h2>
+                </div>
+
+                <ul class="outcomes-list">
+                    <li data-aos="fade-up" data-aos-delay="0">
+                        <span class="out-num">1</span>
+                        <span class="out-text">فهم الفرق بين الفدرالية والتقسيم واللامركزية والكونفدرالية.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="60">
+                        <span class="out-num">2</span>
+                        <span class="out-text">شرح الفدرالية كنظام دستوري لإدارة التعدد لا كخطر على الدولة.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="120">
+                        <span class="out-num">3</span>
+                        <span class="out-text">فهم تاريخ الأزمة اللبنانية قبل الطائف وبعده.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="180">
+                        <span class="out-num">4</span>
+                        <span class="out-text">تحليل أسباب عودة النقاش الفدرالي اليوم.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="240">
+                        <span class="out-num">5</span>
+                        <span class="out-text">التعرّف إلى أبرز الطروحات الفدرالية واللامركزية في لبنان.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <span class="out-num">6</span>
+                        <span class="out-text">الربط بين الفدرالية والسيادة والحياد وبناء الدولة.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="360">
+                        <span class="out-num">7</span>
+                        <span class="out-text">الرد على الاعتراضات الشائعة بلغة هادئة ومقنعة.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="420">
+                        <span class="out-num">8</span>
+                        <span class="out-text">إنتاج خطاب شبابي واضح حول الفدرالية.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="480">
+                        <span class="out-num">9</span>
+                        <span class="out-text">المشاركة في تأسيس خلية شبابية جامعية أو مناطقية لنشر الوعي.</span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="540">
+                        <span class="out-num">10</span>
+                        <span class="out-text">تحويل الفدرالية من فكرة نخبوية إلى نقاش عام مفهوم ومنظّم.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================== REGISTER ================== -->
+        <section class="section register" id="register">
+            <div class="container">
+                <div class="register-card" data-aos="zoom-in">
+                    <div class="register-deco" aria-hidden="true">
+                        <div class="deco-orb deco-orb-1"></div>
+                        <div class="deco-orb deco-orb-2"></div>
+                    </div>
+
+                    <div class="register-grid">
+                        <div class="register-text">
+                            <span class="kicker light">انضمّ إلى الدورة</span>
+                            <h2 class="register-title">
+                                ابدأ رحلتك نحو <span>وعي فدرالي منظّم</span>
+                            </h2>
+                            <p>
+                                سجّل اهتمامك الآن لنُبقيك على اطّلاع بمواعيد المحاضرات،
+                                اللقاءات التحضيرية، وفرص الانضمام إلى الخلايا الشبابية
+                                في منطقتك أو جامعتك.
+                            </p>
+
+                            <ul class="register-list">
+                                <li><i class="fa-solid fa-check"></i> وصول مجاني للمحاضرات</li>
+                                <li><i class="fa-solid fa-check"></i> موادّ قابلة للتحميل</li>
+                                <li><i class="fa-solid fa-check"></i> دعوة للانضمام إلى خلية قريبة منك</li>
+                            </ul>
+                        </div>
+
+                        <form class="register-form" id="registerForm" novalidate>
+                            <h3>سجّل اهتمامك</h3>
+
+                            <div class="field">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" id="name" name="name" required placeholder="مثال: هشام بو ناصيف" />
+                            </div>
+
+                            <div class="field">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" name="email" required placeholder="name@example.com" />
+                            </div>
+
+                            <div class="field">
+                                <label for="city">المدينة / المنطقة</label>
+                                <input type="text" id="city" name="city" required placeholder="بيروت، طرابلس، صيدا..." />
+                            </div>
+
+                            <div class="field">
+                                <label for="role">أنا</label>
+                                <select id="role" name="role" required>
+                                    <option value="">اختر</option>
+                                    <option>طالب جامعي</option>
+                                    <option>طالبة جامعية</option>
+                                    <option>شخص ناشط</option>
+                                    <option>أكاديمي/باحث</option>
+                                    <option>صحفي/إعلامي</option>
+                                    <option>مهتم بالفكرة</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>أرسل اهتمامي</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+
+                            <p class="form-note">
+                                بإرسالك النموذج، توافق على تلقّي رسائل مرتبطة بالدورة فقط.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== FOOTER ================== -->
+        <footer class="footer">
+            <div class="container footer-inner">
+                <div class="footer-brand">
+                    <img src="federal_lebanon_logo_white_transparent_fixed_tagline.png" alt="شعار لبنان الفدرالي" />
+                    <p>
+                        دورة <strong>الفدرالية 101</strong> هي مبادرة توعوية شبابية تنطلق
+                        من موقع <a href="https://federallebanon.org" target="_blank" rel="noopener">FederalLebanon.org</a>
+                        لنشر الوعي الفدرالي بهدوءٍ واحتراف.
+                    </p>
+                </div>
+
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>روابط</h4>
+                        <a href="#about">عن الدورة</a>
+                        <a href="#lectures">المحاضرات</a>
+                        <a href="#outcomes">المخرجات</a>
+                        <a href="#register">التسجيل</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>تابعنا</h4>
+                        <div class="socials">
+                            <a href="https://twitter.com/FederalLebanon_" target="_blank" rel="noopener" aria-label="X / Twitter">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/fed_lb/" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/federalebanon" target="_blank" rel="noopener" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="https://federallebanon.org" target="_blank" rel="noopener" aria-label="الموقع">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container footer-bottom">
+                <p>© <span id="year"></span> الفدرالية 101 · مرتبط بـ <a href="https://federallebanon.org" target="_blank" rel="noopener">لبنان الفدرالي</a></p>
+                <p class="footer-motto">سيادة · حياد · فدراليّة</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
