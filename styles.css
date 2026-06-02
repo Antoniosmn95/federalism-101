@@ -1486,9 +1486,15 @@ ul { list-style: none; }
     .hero-scroll { font-size: 14px; }
     .section-title { font-size: clamp(32px, 5vw, 46px); }
     .section-lead { font-size: 17px; line-height: 2; }
+    .features-grid { gap: 20px; }
+    .feature { padding: 30px 22px; }
+    .feature-icon { width: 54px; height: 54px; font-size: 22px; margin-bottom: 18px; }
+    .feature h3 { font-size: 20px; }
+    .feature p { font-size: 16px; line-height: 1.95; }
     .register-title { font-size: clamp(30px, 5vw, 38px); }
     .register-text > p { font-size: 16px; line-height: 2; }
     .register-form h3 { font-size: 28px; }
+    .register-list li { font-size: 16px; }
     .field label { font-size: 14px; }
     .field input,
     .field select { font-size: 16px; }
@@ -1507,13 +1513,23 @@ ul { list-style: none; }
     .hero-cta .btn { font-size: 14px; padding: 12px 20px; }
     .hero-scroll { font-size: 13px; }
     .section-title { font-size: clamp(28px, 6vw, 36px); }
-    .section-lead { font-size: 18px; }
+    .section-lead { font-size: 18px; line-height: 2; }
+    .features-grid { gap: 18px; }
+    .feature { padding: 26px 18px; }
+    .feature-icon { width: 52px; height: 52px; font-size: 20px; margin-bottom: 16px; }
+    .feature h3 { font-size: 18px; }
+    .feature p { font-size: 17px; line-height: 2; }
     .register-title { font-size: clamp(26px, 6vw, 34px); }
     .register-form h3 { font-size: 26px; }
+    .register-text > p { font-size: 17px; }
+    .register-list li { font-size: 15px; }
     .field input,
     .field select { font-size: 16px; padding: 14px 16px; }
     .out-text { font-size: 17px; }
     .footer-col h4 { font-size: 17px; }
+    .footer-brand p,
+    .footer-col a,
+    .footer-bottom { font-size: 15px; }
 }
 
 /* =========================================================
