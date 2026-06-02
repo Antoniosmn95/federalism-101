@@ -1532,6 +1532,37 @@ ul { list-style: none; }
     .footer-bottom { font-size: 15px; }
 }
 
+@media (max-width: 430px) {
+    body { font-size: 17px; line-height: 2; }
+    .hero { padding: 72px 12px 44px; }
+    .hero-title { font-size: clamp(52px, 18vw, 68px); }
+    .hero-subtitle { font-size: clamp(18px, 6vw, 24px); }
+    .hero-desc { font-size: 19px; }
+    .hero-cta .btn { font-size: 15px; padding: 13px 18px; }
+    .hero-scroll { font-size: 14px; }
+    .section-title { font-size: clamp(26px, 7vw, 34px); }
+    .section-lead { font-size: 19px; line-height: 2.1; }
+    .features-grid { gap: 18px; }
+    .feature { padding: 28px 18px; }
+    .feature-icon { width: 56px; height: 56px; font-size: 22px; }
+    .feature h3 { font-size: 19px; }
+    .feature p { font-size: 18px; line-height: 2; }
+    .register-title { font-size: clamp(24px, 7vw, 32px); }
+    .register-form h3 { font-size: 25px; }
+    .register-text > p { font-size: 18px; }
+    .register-list li { font-size: 16px; }
+    .field label { font-size: 15px; }
+    .field input,
+    .field select { font-size: 17px; padding: 15px 16px; }
+    .out-text { font-size: 18px; line-height: 2; }
+    .footer-col h4 { font-size: 18px; }
+    .footer-brand p,
+    .footer-col a,
+    .footer-bottom { font-size: 16px; }
+    .footer-inner { gap: 30px; }
+    .float-cta { bottom: 18px; left: 18px; }
+}
+
 /* =========================================================
    Animations
 ========================================================= */
